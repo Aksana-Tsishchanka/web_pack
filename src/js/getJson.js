@@ -75,6 +75,7 @@ function createSection(objSection) {
   return sectionEl;
 }
 
+
 function addSections(json) {
   const { section, results: arrSections, copyright } = json;
   document.body.innerHTML = `<header>

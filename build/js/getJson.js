@@ -1,3 +1,4 @@
+var getJson =
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -1707,7 +1708,8 @@
 
 	fetch(url, init).then(function (response) {
 	  return response.json();
-	}).then(processJson);
+		}).then(processJson);
 
 /***/ }
 /******/ ]);
+//# sourceMappingURL=getJson.js.map

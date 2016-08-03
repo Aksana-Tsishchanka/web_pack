@@ -76,9 +76,7 @@ img {
     max-width: 100%;
     background-size: contain;
 }
-.text-container {
 
-}
 .intro-section:hover h2 {
     text-decoration: underline;
 }
