@@ -1,4 +1,4 @@
-import "./css/main.scss";
+//import "./css/main.scss";
 import 'whatwg-fetch';
 import 'es6-promise';
 import * as htmlComponent from './createHtmlComponent';
