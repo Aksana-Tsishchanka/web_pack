@@ -1,16 +1,18 @@
-function createImage(src, height, width, caption) {
+const imageType = 'mediumThreeByTwo210';
+
+export function createImage(src, height, width, caption) {
     return `<img src=${src} height=${height} width=${width} title='${caption}' />`;
 }
 
-function getMedia(multimediaArr, flag) {
+export function getMedia(multimediaArr, flag) {
     return multimediaArr.filter(mediaObj => mediaObj.format === flag)[0];
 }
 
-function createFooter(footerText) {
+export function createFooter(footerText) {
     return `<footer>${footerText.replace('Copyright (c)', '©')}</footer>`;
 }
 
-function calculateDateFrom(seconds, difference, timeArr) {
+export function calculateDateFrom(seconds, difference, timeArr) {
     return timeArr.reduce((result, timeObj) => {
         if (result) return result;
 
@@ -24,7 +26,7 @@ function calculateDateFrom(seconds, difference, timeArr) {
     }, '');
 }
 
-function timeFrom(date) {
+export function timeFrom(date) {
     const difference = new Date() - date;
     const seconds = Math.floor(Math.abs(difference) / 1000);
     const timeArr = [
@@ -38,7 +40,7 @@ function timeFrom(date) {
     return calculateDateFrom(seconds, difference, timeArr) || 'Just now';
 }
 
-function createSection(objSection) {
+export function createSection(objSection) {
     const { short_url: shortUrl, title, abstract, multimedia, byline,
         published_date: publishedDate } = objSection;
 

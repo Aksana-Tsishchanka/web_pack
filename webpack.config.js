@@ -2,12 +2,13 @@
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 const webpack = require('webpack');
+let precss       = require('precss');
+let autoprefixer = require('autoprefixer');
 
 module.exports = {
-    context: __dirname + '/\src/\js',
+    context: __dirname + '\\src',
     entry: {
-        getJson: ['es6-promise', 'whatwg-fetch', './getJson'],
-        createHtmlComponent: './createHtmlComponent'
+        getJson: ['es6-promise', 'whatwg-fetch', '.\\js\\getJson'],
     },
     output: {
         path: __dirname + '/build/js',
@@ -17,20 +18,26 @@ module.exports = {
     module: {
         loaders: [
             {
-            loader: 'babel',
-            test: /\.js$/,
-            exclude: /node_modules/,
-            query: {
-                plugins: ['transform-runtime'],
-                presets: ['es2015']
+                loader: 'babel',
+                test: /\.js$/,
+                exclude: /node_modules/,
+                query: {
+                    plugins: ['transform-runtime'],
+                    presets: ['es2015']
+                },
+            },
+            {
+              test: /\.scss$/,
+              loader: 'style!css-loader!postcss-loader!sass-loader'
             }
-        }]
+        ]
     },
-    watch: NODE_ENV == 'development',
+    postcss: [ autoprefixer({ browsers: ['last 3 versions'] }) ],
+    //watch: true,
     devtool: NODE_ENV == 'development' ? "cheap-module-source-map" : null,
 
     plugins: [
-        new webpack.NoErrorsPlugin(),
+       new webpack.NoErrorsPlugin(),
     ]
 
 };

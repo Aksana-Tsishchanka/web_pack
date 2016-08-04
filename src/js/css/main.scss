@@ -1,3 +1,6 @@
+$hoveredColor: #F0FFFF;
+$headerColor: #008B8B;
+
 html {
     height: 100%;
 }
@@ -20,7 +23,7 @@ h3:first-letter {
 }
 
 header {
-    background-color: #008B8B;
+    background-color: $headerColor;
     font-family: 'Dancing Script', cursive;
     font-size: 40px;
     text-align: center;
@@ -63,10 +66,12 @@ span {
     border-right: none;
 }
 
-.flexbox-container > div:hover {
-    background-color: #F0FFFF;
-}
+.flexbox-container {
+    > div:hover {
+        background-color: $hoveredColor;
+    }
 
+}
 .text-container {
     text-align: left;
 
