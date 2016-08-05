@@ -1,4 +1,4 @@
-//import "./css/main.scss";
+import "main.scss";
 import 'whatwg-fetch';
 import 'es6-promise';
 import * as htmlComponent from './createHtmlComponent';
@@ -9,7 +9,7 @@ const init = {
   url,
 };
 
-function addSections(json) {
+function addSections(json, a) {
   const { section, results: arrSections, copyright } = json;
   document.body.innerHTML = `<header>
                                <h1>The New York Times News</h1>
