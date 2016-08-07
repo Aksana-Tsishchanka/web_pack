@@ -1,0 +1,15 @@
+{
+    "extends": "airbnb",
+    "plugins": [
+
+    ],
+    "rules": {
+        "no-use-before-define": ["error", { "functions": true, "classes": true }],
+        "no-param-reassign": 0,
+        "eslintConfig": {
+            "globals": {
+                "__dirname": true
+            }
+        }
+    }
+}
