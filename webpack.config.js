@@ -51,7 +51,6 @@ module.exports = {
     })
     ],
     devServer: {
-        //contentBase: '/build',
     },
 
     resolve: {

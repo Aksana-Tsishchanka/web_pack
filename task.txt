@@ -22,3 +22,6 @@ https://github.com/jtangelder/sass-loader for point 3
 https://medium.com/@dabit3/beginner-s-guide-to-webpack-b1f1a3638460#.wqzjf6wt1
 https://webpack.github.io/docs/tutorials/getting-started/
 
+Useful commands: 
+
+webpack-dev-server --hot --inline
