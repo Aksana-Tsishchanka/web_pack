@@ -11,8 +11,6 @@
 
 7. настроить вебпак дев сервер, который будет подтягивать изменения и сразу же их показывать (в случае со стилями) или же перезагружать страницу (в случае с js) +
 
-
-
 Useful links:
 https://webpack.github.io/docs/shimming-modules.html
 https://github.com/webpack/script-loader

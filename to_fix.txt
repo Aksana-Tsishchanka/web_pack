@@ -1,0 +1,12 @@
+1) добавь в npm scripts build и start разделы: для простой сборки и для сервака с вотчем
+2) loader: 'style!css-loader!postcss-loader', можно loaders: ['style', 'css', 'postcss']
+3) query от babel лучше закидывать в .babelrc и не дублировать два раза. так получается конфиг в одном месте.
+4) зачем кстати нужен transform-runtime
+5) проблема с кешированием для прода. Всегда на выходе получается app.js. на клиенте он закешируется. и после изменения не стянется новый. чтобы такого не произошло,
+   обычно добавляют хеш в имя файла для билда в прод https://webpack.github.io/docs/long-term-caching.html
+6) extract text plugin для стилей в проде не был бы лишним
+7) import 'whatwg-fetch'; import 'es6-promise'; эти импорты не нужны, потому что они в entry
+
+Read:
+- https://webpack.github.io/docs/list-of-hints.html - to add additional features
+- https://github.com/ampedandwired/html-webpack-plugin - to solve issue from point 5
